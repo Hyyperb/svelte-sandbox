@@ -9,15 +9,16 @@
 		todolist = [...todolist, task];
 		todo_item_input_box.value = null;
 		todo_item_input_box.focus();
-donetaskdonetaskdonetaskdonetask
-	function cleanUp() {
+	}
+	/* function cleanUp() {
 		for (j = 0; j++; j < todolist.length) {
 			if (document.getElementById("task {j}").value == true) {
-				let donedonetasktask = document.getElementById("t");
+				let donetask = document.getElementById("t");
 				donelist = [...donelist, donetask];
 			}
 		}
 	}
+	 */
 </script>
 
 <h1>Todo list</h1>
@@ -25,7 +26,6 @@ donetaskdonetaskdonetaskdonetask
 	<input type="text" id="add" on:change={addTask} />
 </form>
 <button on:click={addTask}>Add</button>
-<button on:click={cleanUp}>Clean up</button>
 <div>
 	{#each todolist as task, i}
 	<div class="task">
@@ -61,8 +61,9 @@ donetaskdonetaskdonetaskdonetask
 	}
 	.done_task {
 		color: #aaaaaa;
-	}
+}
 	.task {
 		display:flex;
 	}
 </style>
+
